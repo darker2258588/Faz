@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بیمه فاضلی</title>
+    <style>
+        body {
+            background: linear-gradient(to right, #74ebd5, #9face6); /* پس‌زمینه خیره کننده */
+            font-family: Arial, sans-serif;
+            color: #333;
+            text-align: center;
+            padding: 50px;
+        }
+
+        .option {
+            background-color: white;
+            border: 2px solid #2ecc71;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 10px;
+            display: inline-block;
+            width: 200px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .option:hover {
+            background-color: #f1f1f1;
+        }
+
+        .message {
+            display: none;
+            margin-top: 20px;
+            font-size: 24px;
+            color: #2ecc71;
+        }
+
+        .tick {
+            display: none;
+            color: #2ecc71;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>بیمه فاضلی</h1>
+
+    <div class="option" onclick="showMessage('بیمه عمر', 3000000)">
+        بیمه عمر<br>
+        <span>۳,۰۰۰,۰۰۰ ریال</span>
+    </div>
+
+    <div class="option" onclick="showMessage('بیمه ماشین', 5000000)">
+        بیمه ماشین<br>
+        <span>۵,۰۰۰,۰۰۰ ریال</span>
+    </div>
+
+    <div class="option" onclick="showMessage('بیمه بارداری', 2000000)">
+        بیمه بارداری<br>
+        <span>۲,۰۰۰,۰۰۰ ریال</span>
+    </div>
+
+    <div class="option" onclick="showMessage('بیمه گوشی', 1500000)">
+        بیمه گوشی<br>
+        <span>۱,۵۰۰,۰۰۰ ریال</span>
+    </div>
+
+    <div class="option" onclick="showMessage('بیمه فوتبال', 1000000)">
+        بیمه فوتبال<br>
+        <span>۱,۰۰۰,۰۰۰ ریال</span>
+    </div>
+
+    <div class="message" id="message"></div>
+    <div class="tick" id="tick">✅</div>
+
+    <script>
+        function showMessage(optionName, price) {
+            const messageDiv = document.getElementById('message');
+            const tickDiv = document.getElementById('tick');
+            messageDiv.innerText = 'خرید موفقیت: ' + optionName + ' به قیمت ' + price + ' ریال';
+            messageDiv.style.display = 'block';
+            tickDiv.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
